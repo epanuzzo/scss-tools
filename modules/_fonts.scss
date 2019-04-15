@@ -1,0 +1,18 @@
+@each $k in $font-name {
+    $font-path: "../assets/fonts/#{nth($k,2)}/";
+    @each $i in $font-type {
+        @if "#{nth($k,1)}" == "#{nth($i,1)}" {
+            @font-face {
+                font-family: #{nth($k,2)};
+                src: url($font-path + '#{nth($i,2)}.eot');
+                src: url($font-path + '#{nth($i,2)}.eot?#iefix') format('embedded-opentype'),
+                     url($font-path + '#{nth($i,2)}.woff2') format('woff2'),
+                     url($font-path + '#{nth($i,2)}.woff') format('woff'),
+                     url($font-path + '#{nth($i,2)}.ttf') format('truetype'),
+                     url($font-path + '#{nth($i,2)}.svg##{nth($k,2)}') format('svg');
+                font-weight: #{nth($i,3)};
+                font-style: #{nth($i,4)};
+            }
+        }
+    }
+}

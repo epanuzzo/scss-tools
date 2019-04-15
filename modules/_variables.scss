@@ -1,0 +1,9 @@
+// For integred font
+$font-name: (1 "karla")(2 "fontawesome");
+$font-type: (1 "karla-regular-webfont" "normal" "normal")
+            (1 "karla-italic-webfont" "normal" "italic")
+            (1 "karla-bolditalic-webfont" "bold" "italic")
+            (1 "karla-bold-webfont" "bold" "normal")
+            (2 "fontawesome-webfont" "normal" "normal");
+
+$base-font: karla,Arial,sans-serif;
